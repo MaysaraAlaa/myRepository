@@ -49,13 +49,13 @@ void ADC_Init(VREF_TYPE Vref)
 	
 	ADCSRA = (ADCSRA & Select_PreScaler_Mask) | ADPS;    // Set ADPS Value (Prescaler)
 	
-	ADMUX = (ADMUX & Vref_Mask) | (Vref << 6);      // Set Vref
+	ADMUX = (ADMUX & Vref_Mask) | (Vref << 6);           // Set Vref
 	
-//	SET_BIT(ADMUX, ADLAR);				// Left adjust ADC result
+//	SET_BIT(ADMUX, ADLAR);				     // Left adjust ADC result
 	
-	SET_BIT(ADCSRA, ADIE);				// ADC local Interrupt Enable
+	SET_BIT(ADCSRA, ADIE);				     // ADC local Interrupt Enable
 	
-	SET_BIT(ADCSRA, ADEN);            	// ADC Enable
+	SET_BIT(ADCSRA, ADEN);            	             // ADC Enable
 }
 
 /*************************************************************************/
