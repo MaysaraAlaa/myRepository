@@ -65,7 +65,7 @@ void ADC_Start_Conversion(CHANNEL_TYPE Channel, U8 Trigger_Type)
 {
 	ADMUX = (ADMUX & Choose_Channel_Mask) | Channel;  // Choose Channel
 	
-	SET_BIT(ADCSRA, ADSC);             // Start Conversion
+	SET_BIT(ADCSRA, ADSC);                 // Start Conversion
 	
 	// Auto Trigger Enable 4 1 Channel
 	if (Trigger_Type == Auto_Trigger)
