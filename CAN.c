@@ -344,3 +344,4 @@ void CAN_Receive(can_msg_t *msg)
     // Release the FIFO mailbox
     CAN1->RF0R |= CAN_RF0R_RFOM0;
   }
+}
